@@ -1,0 +1,27 @@
+{
+  "name": "webhook-forward-server",
+  "version": "1.0.0",
+  "description": "Server to receive Webhook HTTP requests and forward them to connect clients",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "build-dev": "tsc --incremental --project tsconfig.build.json && node .",
+    "dev": "nodemon",
+    "test": "vitest run",
+    "lint:eslint": "eslint src",
+    "lint:tsc": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gretro/webhook-forward.git"
+  },
+  "author": "Gabriel Lemire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gretro/webhook-forward/issues"
+  },
+  "homepage": "https://github.com/gretro/webhook-forward#readme",
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  }
+}

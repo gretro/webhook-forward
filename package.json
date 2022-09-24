@@ -1,0 +1,40 @@
+{
+  "name": "webhook-forward",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple Service to forward webhook calls to connected clients",
+  "scripts": {
+    "dev": "npm run dev -w packages/server",
+    "test": "npm run test --workspaces",
+    "lint:prettier": "prettier **/*.ts -c",
+    "lint:eslint": "npm run lint:eslint --workspaces"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gretro/webhook-forward.git"
+  },
+  "keywords": [
+    "webhooks",
+    "forward",
+    "proxy"
+  ],
+  "author": "Gabriel Lemire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gretro/webhook-forward/issues"
+  },
+  "homepage": "https://github.com/gretro/webhook-forward#readme",
+  "workspaces": [
+    "packages/server"
+  ],
+  "devDependencies": {
+    "@types/node": "18.7.19",
+    "@typescript-eslint/eslint-plugin": "5.38.0",
+    "@typescript-eslint/parser": "5.38.0",
+    "eslint": "8.24.0",
+    "prettier": "2.7.1",
+    "rimraf": "3.0.2",
+    "typescript": "4.8.3",
+    "vitest": "0.23.4"
+  }
+}
