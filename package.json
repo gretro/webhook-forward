@@ -4,10 +4,13 @@
   "private": true,
   "description": "Simple Service to forward webhook calls to connected clients",
   "scripts": {
+    "prepare": "husky install",
     "dev": "npm run dev -w packages/server",
     "test": "npm run test --workspaces",
+    "lint": "concurrently --prefix-colors grey,yellow,blue,green --group npm:lint:*",
     "lint:prettier": "prettier **/*.ts -c",
-    "lint:eslint": "npm run lint:eslint --workspaces"
+    "lint:eslint": "npm run lint:eslint --workspaces",
+    "lint:tsc": "npm run lint:tsc --workspaces"
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,10 @@
     "@types/node": "18.7.19",
     "@typescript-eslint/eslint-plugin": "5.38.0",
     "@typescript-eslint/parser": "5.38.0",
+    "concurrently": "7.4.0",
     "eslint": "8.24.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "typescript": "4.8.3",

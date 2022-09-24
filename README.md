@@ -1,2 +1,3 @@
-# webhook-forward
-Simple service to forward webhook calls using subscriptions
+# Webhook Forward
+
+Simple service to forward webhook calls to subscribers.
